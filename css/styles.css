@@ -82,7 +82,7 @@ a.menu-button:hover {
 /* small screens */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2vw;
+    font-size: 2vh;
   }
 
   #desktop-menu {
@@ -94,7 +94,7 @@ a.menu-button:hover {
   }
 
   a.menu-button {
-    font-size: 2.75vw;
+    font-size: 2.75vh;
     margin: 1vh;
   }
 
