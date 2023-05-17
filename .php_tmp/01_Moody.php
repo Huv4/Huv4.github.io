@@ -13,19 +13,19 @@
     FELIX DRESSLER.
   </h1>
   <div>
-    <div>
-      <?php
-      $handle = opendir(dirname(realpath(__FILE__)) . '/images/');
-      while ($file = readdir($handle)) {
-        if ($file !== '.' && $file !== '..') {
-          echo '<img src="images/' . $file . '" border="0" />';
-        }
+    <?php
+    $dir = 'https://i.postimg.cc/gallery/wBRqBtr';
+    $files = scandir($dir);
+
+    foreach ($files as $file) {
+      $ext = pathinfo($file, PATHINFO_EXTENSION);
+      if ($ext === 'jpg' || $ext === 'jpeg' || $ext === 'png' || $ext === 'gif') {
+        echo "<img src='$dir$file' alt='image' />";
       }
-      ?>
-    </div>
+    }
+    ?>
   </div>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>
