@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <link rel="stylesheet" href="css/form_styles.css">
+  <title>Upload - Felix Dressler</title>
+</head>
+
+<body>
+  <h1>
+    FELIX DRESSLER.
+  </h1>
+  <form action="uploads/store_images.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="uploaded_image" id="fileToUpload" accept="image/png, image/jpeg" multiple required />
+    <input type="submit" value="Submit">
+  </form>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
