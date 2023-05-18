@@ -3,8 +3,10 @@
 
 <body>
   <?php
-  $target_dir = "./uploads/";
-  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+  require_once "main.php";
+  echo SITE_ROOT;
+  $target_dir = "\uploads\\";
+  $target_file = SITE_ROOT . $target_dir . basename($_FILES["fileToUpload"]["name"]);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
@@ -24,8 +26,8 @@
     $uploadOk = 0;
   }
 
-  // Check file size
-  if ($_FILES["fileToUpload"]["size"] > 20000) {
+  // Check file size in bytes here 20MB
+  if ($_FILES["fileToUpload"]["size"] > 20000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
   }
