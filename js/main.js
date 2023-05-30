@@ -15,10 +15,13 @@ if (typeof (gallery) != "undefined" && gallery != null) {
         const image = document.createElement("img");
         image.src = `/PHP/uploads/${i}`;
         image.alt = "A picture. Probably beautiful.";
-        image.classList.add("photo");
+        image.classList.add("galleryImg");
 
         image.addEventListener("click", () => {
           //popup stuff
+          popup.style.transform = `translateY(0)`;
+          selectedImage.src = `/PHP/uploads/${i}`;
+          selectedImage.alt = "A picture. Probably beautiful.";
         });
 
         gallery.appendChild(image);
@@ -27,3 +30,9 @@ if (typeof (gallery) != "undefined" && gallery != null) {
 } else {
   console.log("Not on Photo Gallery Page.S");
 }
+
+popup.addEventListener("click", () => {
+  popup.style.transform = `translateY(-100%)`;
+  popup.src = "";
+  popup.alt = "";
+});
