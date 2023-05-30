@@ -36,3 +36,15 @@ popup.addEventListener("click", () => {
   popup.src = "";
   popup.alt = "";
 });
+
+//init masonry
+var $grid = $('.container').masonry({
+  itemSelector: '#photo-gallery',
+  percentPosition: true,
+  columnWidth: '#photo-gallery'
+});
+
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress(function () {
+  $grid.masonry();
+});  
