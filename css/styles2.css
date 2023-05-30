@@ -12,6 +12,7 @@ Montserrat
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Sections */
@@ -28,17 +29,17 @@ h1 {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 0px;
   width: 80%;
-  margin-top: 3vh;
+  margin-top: 6vh;
 }
 
 #photo-gallery {
-  column-count: 3;
+  columns: 3 250px;
+  gap: 15px;
 }
 
 .galleryImg {
-  max-width: 400px;
+  max-width: 100%;
   border-radius: 2px;
   cursor: pointer;
   transition: transform 250ms;
