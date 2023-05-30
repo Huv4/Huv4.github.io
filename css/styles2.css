@@ -38,7 +38,7 @@ h1 {
 }
 
 .galleryImg {
-  height: 400px;
+  max-width: 400px;
   border-radius: 2px;
   cursor: pointer;
   transition: transform 250ms;
