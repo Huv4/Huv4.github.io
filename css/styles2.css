@@ -45,11 +45,6 @@ h1 {
   transition: transform 250ms;
 }
 
-.galleryImg:hover {
-  transform: translate(-2px);
-  box-shadow: 3px 3px 10px black;
-}
-
 #popup {
   position: fixed;
   top: 0;
