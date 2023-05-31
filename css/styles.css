@@ -16,12 +16,12 @@ Montserrat
 
 /* Sections */
 h1 {
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25vw;
   margin-top: 2.5vh;
   margin-left: 2.5vw;
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 2;
 }
 
