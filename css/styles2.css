@@ -13,6 +13,7 @@ Montserrat
   margin: 0 auto;
   width: 80%;
   margin-top: 6vh;
+  z-index: 1;
 }
 
 #photo-gallery {
