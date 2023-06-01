@@ -10,7 +10,7 @@ let columnIndex = 0;
 let i = 1;
 
 function fetchData() {
-  fetch(`https://ik.imagekit.io/photoggang/tr:w-8/Felix/Moody/image${i}.jpg`)
+  fetch(`https://ik.imagekit.io/photoggang/tr:w-8/Felix/01_Portfolio/${i}_image.jpg`)
     .then(response => {
       if (response.status === 404) {
         throw new Error("Image not found");
@@ -23,25 +23,20 @@ function fetchData() {
       const photo = document.createElement("div");
       photo.classList.add("photo")
       const image = document.createElement("img");
-      image.src = `https://ik.imagekit.io/photoggang/tr:w-800/Felix/Moody/image${i}.jpg`; //used as default
+      image.src = `https://ik.imagekit.io/photoggang/tr:w-800/Felix/01_Portfolio/${1}_image.jpg 800w,
+      `; //used as default
       image.srcset = `
-      https://ik.imagekit.io/photoggang/tr:w-400/Felix/Moody/image${i}.jpg 400w, 
-      https://ik.imagekit.io/photoggang/tr:w-800/Felix/Moody/image${i}.jpg 800w,
-      https://ik.imagekit.io/photoggang/tr:w-1200/Felix/Moody/image${i}.jpg 1200w`; //use this for different screen sizes
+      https://ik.imagekit.io/photoggang/tr:w-400/Felix/01_Portfolio/${i}_image.jpg 400w, 
+      https://ik.imagekit.io/photoggang/tr:w-800/Felix/01_Portfolio/${i}_image.jpg 800w,
+      https://ik.imagekit.io/photoggang/tr:w-1200/Felix/01_Portfolio/${i}_image.jpg 1200w`; //use this for different screen sizes
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
 
       //Append the photo to the current column
-      columns[columnIndex].appendChild(photo);
+      columns[columnIndex].prepend(photo);
       photo.appendChild(image);
       //update the column index for the next iteration
       columnIndex = (columnIndex + 1) % columns.length;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-        popup.alt = "";
-      });
-
       // Increment the counter and call the next iteration
       i++;
       fetchData();
@@ -57,7 +52,9 @@ function fetchData() {
 };
 
 //only run this script when on Photo Gallery Pages
-if (typeof (gallery) != "undefined" && gallery != null) { fetchData() }
+if (typeof (gallery) != "undefined" && gallery != null) {
+  fetchData()
+}
 else {
   console.log("Not on Photo Gallery Page.S");
 };

@@ -33,7 +33,7 @@ Montserrat
   border-radius: 2px;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 768px) {
   #photo-gallery {
     flex-direction: column-reverse;
   }
@@ -41,6 +41,7 @@ Montserrat
   #photo-gallery {
     margin-top: 1vh;
   }
+
 }
 
 #popup {

@@ -6,7 +6,7 @@ Montserrat Subrayada
 Montserrat
 */
 
-@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&family=Montserrat+Subrayada&family=Montserrat:wght@100&display=swap);
+@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&family=Montserrat+Subrayada&family=Montserrat:wght@200;300&display=swap);
 
 /* Remove default margin + padding */
 * {
@@ -17,9 +17,18 @@ Montserrat
 /* Sections */
 h1 {
   text-align: center;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+  margin-top: 7vh;
+  margin-left: 2.5vw;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 200;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5vw;
-  margin-top: 2.5vh;
   margin-left: 2.5vw;
 }
 
@@ -27,12 +36,66 @@ body {
   background-color: whitesmoke;
 }
 
-nav {
-  font-family: 'Montserrat Subrayada', sans-serif;
+#menu-icon {
+  height: 6vh;
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 4%;
+  color: rgb(211, 211, 211);
+}
+
+.sidenav {
+  align-items: center;
+  background-color: whitesmoke;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  /* 0 width - change this with JavaScript */
+  width: 0;
+  z-index: 4;
+}
+
+.sidenavcenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  color: black;
+  font-weight: 300;
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidenav a:hover {
+  font-weight: 100;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 /* Menu */
 #desktop-menu {
+  font-family: 'Montserrat Subrayada', sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,11 +127,24 @@ a.menu-button:hover {
 
 .menu-content {
   font-family: "Montserrat", sans-serif;
+  font-weight: 100;
   height: 0;
   overflow: hidden;
   position: absolute;
   left: 0px;
-  right: 0px;
+  right: 30%;
+  text-align: justify;
+  transition: all 0.2s ease-in;
+  top: 100%;
+}
+
+.categories {
+  font-family: "Montserrat", sans-serif;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  right: 0%;
   text-align: justify;
   transition: all 0.2s ease-in;
   top: 100%;
@@ -79,10 +155,20 @@ a.menu-button:hover {
   height: 300px;
 }
 
+.collapsible-container:hover .categories {
+  display: block;
+  height: 300px;
+}
+
+
 /* small screens */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2vh;
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3vw;
   }
 
   #desktop-menu {
@@ -95,10 +181,14 @@ a.menu-button:hover {
 
   a.menu-button {
     font-size: 2.75vh;
-    margin: 1vh;
+  }
+
+  .collapsible-container {
+    margin-top: 10px;
   }
 
   .collapsible-container:hover .menu-content {
     display: none;
   }
+
 }
