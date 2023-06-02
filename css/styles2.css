@@ -83,19 +83,12 @@ Montserrat
   height: 150px;
 }
 
-/*Side Menu*/
-#menu-icon {
-  height: 6vh;
-  position: fixed;
-  z-index: 3;
-  top: 50%;
-  left: 4%;
-  color: rgb(211, 211, 211);
-}
+/*Top Menu Navbar*/
 
-.sidenav {
+/*Side Footer*/
+.sideFooter {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: none;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -103,31 +96,25 @@ Montserrat
   overflow-x: hidden;
   position: fixed;
   top: 0;
-  transition: 0.2s;
-  /* 0 width - change this with JavaScript */
-  width: 0;
-  z-index: 4;
+  width: 10%;
 }
 
-.sidenavcenter {
+.sideFootercontent {
   display: flex;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-/* The navigation menu links */
-.sidenav a {
+.sideFootercontent a {
   color: black;
-  font-weight: 300;
-  font-size: 1.5vw;
-  font-family: 'Montserrat', sans-serif;
-  padding: 4px;
   text-decoration: none;
-  transition: 0.2s;
 }
 
-.sidenav a:hover {
+.sideFooter a:hover {
   font-weight: 100;
 }
 
@@ -141,12 +128,12 @@ Montserrat
 
   /* Dropdown Navbar*/
 
-  /* Side Menu*/
-  .sidenav {
+  /* Side Footer*/
+  .sideFooter {
     padding-top: 15px;
   }
 
-  .sidenav a {
+  .sideFooter a {
     font-size: 18px;
   }
 }
