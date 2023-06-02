@@ -101,55 +101,6 @@ a.menu-button:hover {
   height: 300px;
 }
 
-
-/*Side Menu*/
-#menu-icon {
-  height: 6vh;
-  position: fixed;
-  z-index: 3;
-  top: 50%;
-  left: 4%;
-  color: rgb(211, 211, 211);
-}
-
-.sidenav {
-  align-items: center;
-  background-color: whitesmoke;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  overflow-x: hidden;
-  position: fixed;
-  top: 0;
-  transition: 0.2s;
-  /* 0 width - change this with JavaScript */
-  width: 0;
-  z-index: 4;
-}
-
-.sidenavcenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  color: black;
-  font-weight: 300;
-  font-size: 1.5vw;
-  font-family: 'Montserrat', sans-serif;
-  padding: 4px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.sidenav a:hover {
-  font-weight: 100;
-}
-
 /* small screens */
 @media only screen and (max-width: 768px) {
 
@@ -181,14 +132,5 @@ a.menu-button:hover {
 
   .collapsible-container:hover .menu-content {
     display: none;
-  }
-
-  /* Side Menu*/
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
   }
 }
