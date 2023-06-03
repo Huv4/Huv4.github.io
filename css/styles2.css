@@ -88,20 +88,27 @@ Montserrat
   text-align: center;
 }
 
+.styleElement {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #categoryMenuContent {
-  display: flex;
-  justify-content: center;
+  display: none;
   font-weight: 200;
-  height: 0;
+  height: auto;
+  justify-content: center;
   overflow: hidden;
   position: absolute;
-  transition: all 0.4s ease-in;
   left: 50%;
   transform: translateX(-50%);
 }
 
 #categoryMenuContent a {
   font-weight: 200;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #categoryMenuContent a:hover {
@@ -109,11 +116,12 @@ Montserrat
 }
 
 #categoryMenu:hover #categoryMenuContent {
-  height: 40px;
+  display: flex;
 }
 
-
-#categoryMenu:hover .styleElement {}
+#categoryMenu:hover .styleElement {
+  display: none;
+}
 
 /*Side Footer*/
 .sideFooter {
