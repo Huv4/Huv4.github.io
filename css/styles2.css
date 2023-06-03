@@ -48,10 +48,10 @@ Montserrat
   font-size: 1.4rem;
 }
 
-.dropdown:hover .dropdown-content {
+/*.dropdown:hover .dropdown-content {
   display: block;
   height: 10rem;
-}
+}*/
 
 /*Category Navbar*/
 #categoryMenu {
@@ -83,9 +83,9 @@ Montserrat
   padding-right: 10px;
 }
 
-#categoryMenu:hover #categoryMenuContent {
+/*#categoryMenu:hover #categoryMenuContent {
   display: flex;
-}
+}*/
 
 #categoryMenu:hover .styleElement {
   display: none;
