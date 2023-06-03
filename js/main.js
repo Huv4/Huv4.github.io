@@ -8,11 +8,13 @@ const column3 = document.getElementById("column3");
 const columns = [column1, column2, column3]; //array to iterate over columns
 let columnIndex = 0;
 let i = 1;
+var media = window.matchMedia("(max-width: 768px)")
 
 //define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
 const pagePhotographer = document.getElementById("photographer").textContent;
 
+//run this for big screens
 function fetchData() {
   function getcorrectPath(q) {
     const dataStructure = {
@@ -47,12 +49,16 @@ function fetchData() {
       image.src = getcorrectPath("tr:w-auto-800"); //used as default
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
-
-      //Append the photo to the current column
-      columns[columnIndex].prepend(photo);
-      photo.appendChild(image);
-      //update the column index for the next iteration
-      columnIndex = (columnIndex + 1) % columns.length;
+      //decide if big or small screen
+      if (media.matches) {
+        gallery.appendChild(image);
+      } else {
+        //Append the photo to the current column
+        columns[columnIndex].prepend(photo);
+        photo.appendChild(image);
+        //update the column index for the next iteration
+        columnIndex = (columnIndex + 1) % columns.length;
+      };
       // Increment the counter and call the next iteration
       i++;
       fetchData();
@@ -67,11 +73,19 @@ function fetchData() {
     });
 };
 
-//only run this script when on Photo Gallery Pages
-if (typeof (gallery) != "undefined" && gallery != null) {
-  console.log(pagePhotographer, pageType)
-  fetchData();
-}
-else {
-  console.log("Not on Photo Gallery Page.S");
+function start() {
+  //only run this script when on Photo Gallery Pages
+  if (typeof (gallery) != "undefined" && gallery != null) {
+    console.log(pagePhotographer, pageType)
+    fetchData();
+  }
+  else {
+    console.log("Not on Photo Gallery Page.S");
+  };
 };
+
+//media.addListener(() => {
+// Reload the window when resized
+//  location.reload();
+//});
+start();
