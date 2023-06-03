@@ -52,8 +52,9 @@ body {
 }
 
 .collapsible-container {
-  display: block;
+  display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 a.menu-button {
@@ -73,10 +74,10 @@ a.menu-button:hover {
   overflow: hidden;
   position: absolute;
   left: 0px;
-  right: 30%;
   text-align: justify;
   transition: all 0.4s ease-in;
   top: 100%;
+  width: 95%;
 }
 
 .categories {
@@ -102,7 +103,7 @@ a.menu-button:hover {
 }
 
 /* small screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1210px) {
 
   /* Sections */
   #h1LandingPage {

@@ -157,16 +157,16 @@ Montserrat
 @media(max-width: 768px) {
   h1 {
     margin-top: 0;
-    font-size: 1.25rem;
+    font-size: 1.55rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* Dropdown Navbar*/
   .dropdown-content a {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .dropdown:hover .dropdown-content {
@@ -176,11 +176,11 @@ Montserrat
 
   /*Category Menu*/
   #categoryMenuContent a {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   #categoryMenuContent a:hover {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .styleElement {
@@ -203,7 +203,7 @@ Montserrat
     display: flex;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     flex-direction: column;
     margin-top: 5vh;
     text-align: center;
