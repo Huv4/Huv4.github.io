@@ -2,11 +2,13 @@ const category = document.getElementById('categoryMenuContent');
 const dropdown = document.getElementById("nameDropdownContent");
 
 function displayCategory() {
-  category.style.display = "flex";
+  category.style.visibility = "visible";
+  category.style.opacity = "1";
 };
 
 function hideCategory() {
-  category.style.display = "none";
+  category.style.visibility = "hidden";
+  category.style.opacity = "0";
 };
 
 function displayNames() {
