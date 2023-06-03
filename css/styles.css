@@ -13,7 +13,7 @@ h1 {
   text-align: center;
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2vw;
+  font-size: 2rem;
   margin-top: 7vh;
 }
 
@@ -21,7 +21,7 @@ h2 {
   text-align: center;
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 body {
@@ -58,7 +58,7 @@ body {
 
 a.menu-button {
   color: black;
-  font-size: 2vw;
+  font-size: 2rem;
   text-decoration: none;
 }
 
@@ -102,15 +102,11 @@ a.menu-button:hover {
 }
 
 /* small screens */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
 
   /* Sections */
-  h1 {
-    font-size: 4vw;
-  }
-
-  h2 {
-    font-size: 3vw;
+  #h1LandingPage {
+    margin-top: 20vh;
   }
 
   /*Desktop Menu*/
@@ -123,7 +119,7 @@ a.menu-button:hover {
   }
 
   a.menu-button {
-    font-size: 2.75vh;
+    font-size: 1.5rem;
   }
 
   .collapsible-container {
