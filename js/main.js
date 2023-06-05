@@ -22,10 +22,10 @@ function fetchData() {
   function getcorrectPath(q) {
     const dataStructure = {
       "FELIX DRESSLER.": {
-        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Felix/01_Portfolio/${i}_image.jpg`,
-        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Felix/02_People/${i}_image.jpg`,
-        "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Felix/03_Travels/${i}_image.jpg`,
-        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Felix/04_Wedding/${i}_image.jpg`
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/01_Portfolio/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/02_People/${i}_image.jpg`,
+        "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/03_Travels/${i}_image.jpg`,
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/04_Wedding/${i}_image.jpg`
       },
       "LEO CONRADT.": {},
       "PAULA SCHMIDT.": {},
