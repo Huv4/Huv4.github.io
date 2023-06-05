@@ -73,19 +73,11 @@ function fetchData() {
     });
 };
 
-function start() {
-  //only run this script when on Photo Gallery Pages
-  if (typeof (gallery) != "undefined" && gallery != null) {
-    console.log(pagePhotographer, pageType)
-    fetchData();
-  }
-  else {
-    console.log("Not on Photo Gallery Page.S");
-  };
+//only run this script when on Photo Gallery Pages
+if (typeof (gallery) != "undefined" && gallery != null) {
+  console.log(pagePhotographer, pageType)
+  fetchData();
+}
+else {
+  console.log("Not on Photo Gallery Page.S");
 };
-
-//media.addListener(() => {
-// Reload the window when resized
-//  location.reload();
-//});
-start();
