@@ -43,10 +43,16 @@ function fetchData() {
     .then(blob => {
       // Process the image here
       const photo = document.createElement("div");
+      const smallimage = getcorrectPath("tr:w-1000");
+      const mediumimage = getcorrectPath("tr:w-1300");
+      const largeimage = getcorrectPath("tr:w-1600");
       photo.classList.add("photo")
       const image = document.createElement("img");
-      image.sizes = "(max-width: 768px) 33.3vw, 100vw";
-      image.src = getcorrectPath("tr:w-auto-800"); //used as default
+      image.src = getcorrectPath("tr:w-100"); //used as default
+      image.srcset = `${largeimage} 768w,
+      ${mediumimage} 2000w,
+      ${smallimage} 3000w`;
+      sizes = "(max-width: 768px) 100vw, 33vw";
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
       //decide if big or small screen
