@@ -21,16 +21,16 @@ function fetchData() {
   console.log("fetching path", getcorrectPath("tr:w-8"))
   function getcorrectPath(q) {
     const dataStructure = {
-      "FELIX DRESSLER.": {
+      "FELIX DRESSLER": {
         "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/01_Portfolio/${i}_image.jpg`,
         "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/02_People/${i}_image.jpg`,
         "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/03_Travels/${i}_image.jpg`,
         "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/04_Wedding/${i}_image.jpg`
       },
-      "LEO CONRADT.": {},
-      "PAULA SCHMIDT.": {},
-      "ARNE BÖHMER.": {},
-      "HANNES SCHUBERT.": {},
+      "LEO CONRADT": {},
+      "PAULA SCHMIDT": {},
+      "ARNE BÖHMER": {},
+      "HANNES SCHUBERT": {},
     };
     const path = dataStructure[pagePhotographer][pageType];
     return path;
