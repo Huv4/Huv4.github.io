@@ -13,10 +13,21 @@ Montserrat
 }
 
 .backbutton {
+  margin-top: 7vh;
+  margin-left: 10rem;
   position: absolute;
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
+}
+
+.backbutton a {
+  text-decoration: none;
+  color: black;
+}
+
+.backbutton:hover {
+  font-weight: 300;
 }
 
 /*Dropdown Navbar*/
@@ -65,7 +76,7 @@ Montserrat
 /*Category Navbar*/
 #pageType {
   transform: translateY(-10px);
-  background-color: rgba(167, 165, 165, 0.205);
+  background-color: rgba(255, 255, 255, 0.524);
   border-radius: 5px;
 }
 
