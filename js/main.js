@@ -22,14 +22,33 @@ function fetchData() {
   function getcorrectPath(q) {
     const dataStructure = {
       "FELIX DRESSLER": {
-        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/01_Portfolio/${i}_image.jpg`,
-        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/02_People/${i}_image.jpg`,
-        "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/03_Travels/${i}_image.jpg`,
-        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Knips_Fotografie/Felix/04_Wedding/${i}_image.jpg`
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/01_Portfolio/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/02_People/${i}_image.jpg`,
+        "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/03_Travels/${i}_image.jpg`,
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/04_Wedding/${i}_image.jpg`,
+        "B&W": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/05_B_W/${i}_image.jpg`
       },
-      "LEO CONRADT": {},
-      "PAULA SCHMIDT": {},
-      "ARNE BÖHMER": {},
+      "LEO CONRADT": {
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Leo/01_Portfolio/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Leo/02_People/${i}_image.jpg`,
+        "MAKROWORLD": `https://ik.imagekit.io/photoggang/${q}/Blende17/Leo/03_MakroWorld/${i}_image.jpg`,
+        "STREETLIFE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Leo/04_Streetlife/${i}_image.jpg`,
+        "GO OUTSIDE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Leo/05_GoOutside/${i}_image.jpg`
+      },
+      "PAULA SCHMIDT": {
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/01_Portfolio/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/02_People/${i}_image.jpg`,
+        "MAKRO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/03_Makro/${i}_image.jpg`,
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/04_Wedding/${i}_image.jpg`
+      },
+      "ARNE BÖHMER": {
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/01_Portfolio/${i}_image.jpg`,
+        "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/02_Travels/${i}_image.jpg`,
+        "EVENTS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/03_Events/${i}_image.jpg`,
+        "STREET": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/04_Street/${i}_image.jpg`,
+        "NATURE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/05_Nature/${i}_image.jpg`,
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/06_Wedding/${i}_image.jpg`
+      },
       "HANNES SCHUBERT": {},
     };
     const path = dataStructure[pagePhotographer][pageType];
