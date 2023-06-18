@@ -73,7 +73,7 @@ function fetchData() {
       image.srcset = `${largeimage} 768w,
             ${mediumimage} 2000w,
             ${smallimage} 3000w`;
-      sizes = "(max-width: 768px) 100vw, 33vw";
+      image.sizes = "(max-width: 768px) 100vw, 33vw";
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
       //decide if big or small screen
@@ -98,10 +98,6 @@ function fetchData() {
         console.error(error);
       }
     });
-};
-
-function addMenu() {
-
 };
 
 //only run this script when on Photo Gallery Pages
