@@ -189,13 +189,21 @@ Montserrat
   }
 
   /*Category Menu*/
-  .categoryMenuContent a {
-    font-size: 1rem;
-    font-weight: 300;
+  .categoryMenuContent {
+    margin-top: 1vh;
+    display: block;
+    text-align: center;
   }
 
-  .styleElement {
-    margin-top: -7px;
+  .categoryMenuContent a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 5px;
+  }
+
+  #pageType {
+    transform: translateY(0px);
   }
 
   /* Photo Gallery */

@@ -1,6 +1,5 @@
 //access json element
 const gallery = document.getElementById("photo-gallery");
-const popup = document.getElementById("popup");
 const selectedImage = document.getElementById("selectedImage");
 const column1 = document.getElementById("column1");
 const column2 = document.getElementById("column2");
@@ -99,6 +98,10 @@ function fetchData() {
         console.error(error);
       }
     });
+};
+
+function addMenu() {
+
 };
 
 //only run this script when on Photo Gallery Pages
