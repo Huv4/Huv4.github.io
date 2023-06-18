@@ -12,6 +12,24 @@ Montserrat
   font-family: 'Montserrat Subrayada', sans-serif;
 }
 
+.backbutton {
+  margin-top: 7vh;
+  margin-left: 10rem;
+  position: absolute;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.backbutton a {
+  text-decoration: none;
+  color: black;
+}
+
+.backbutton:hover {
+  font-weight: 300;
+}
+
 /*Dropdown Navbar*/
 .navbar {
   display: flex;
@@ -56,44 +74,35 @@ Montserrat
 }
 
 /*Category Navbar*/
-#categoryMenu {
+#pageType {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.524);
+  border-radius: 5px;
+}
+
+.categoryMenuContent {
+  position: relative;
   text-align: center;
-}
-
-.styleElement {
-  font-weight: 200;
-  margin-top: -10px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#categoryMenuContent {
+  margin-top: 30px;
   display: flex;
-  visibility: hidden;
   font-weight: 200;
   height: auto;
   justify-content: center;
-  overflow: hidden;
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: visibility 0.4s linear,
-    opacity 0.2s linear;
-  -webkit-transition: visibility 0.4s linear,
-    opacity 0.2s linear;
-  -moz-transition: visibility 0.4s linear,
-    opacity 0.2s linear;
-  -o-transition: visibility 0.4s linear,
-    opacity 0.2s linear;
 }
 
-#categoryMenuContent a {
+.categoryMenuContent a {
+  color: black;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 1.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.categoryMenuContent a:hover {
+  transform: translateY(-10px);
 }
 
 /* Photo Gallery */
@@ -101,7 +110,7 @@ Montserrat
   max-width: 1600px;
   margin: 0 auto;
   width: 80%;
-  margin-top: 6vh;
+  margin-top: 10px;
 }
 
 #photo-gallery {
@@ -180,12 +189,9 @@ Montserrat
   }
 
   /*Category Menu*/
-  #categoryMenuContent a {
-    font-size: 0.9rem;
-  }
-
-  #categoryMenuContent a:hover {
-    font-size: 0.9rem;
+  .categoryMenuContent a {
+    font-size: 1rem;
+    font-weight: 300;
   }
 
   .styleElement {
