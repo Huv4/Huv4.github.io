@@ -6,7 +6,7 @@ Montserrat Subrayada
 Montserrat
 */
 
-@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&family=Montserrat+Subrayada&family=Montserrat:wght@200;300&display=swap);
+@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&family=Montserrat+Subrayada&family=Montserrat:wght@200;300&display=swap);
 
 /* Sections */
 h1 {
@@ -14,7 +14,7 @@ h1 {
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  margin-top: 9vh;
+  margin-top: 50px;
 }
 
 h2 {
@@ -34,74 +34,81 @@ body {
   padding: 0;
 }
 
-/* Desktop Menu */
-#desktop-menu {
-  font-family: 'Montserrat Subrayada', sans-serif;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
+.frontPageImage {
+  width: 100%;
+}
+
+.clickable {
+  text-decoration: none;
+  color: black;
+}
+
+.PhotographerName {
+  color: black;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+  word-spacing: 100vw;
+  width: 100%;
+}
+
+/* Flip Card */
+.flip-card-container {
   display: flex;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+  top: 0%;
+  left: 0%;
+  transform: translateY(-50%);
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
   max-width: 100%;
   justify-content: space-between;
   width: 90vw;
 }
 
-.frontPageImageContainer {
-  position: absolute;
-  top: -15vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.flip-card {
+  width: 19vw;
+  perspective: 1000px;
 }
 
-.frontPageImage {
-  margin-left: 0;
-  height: 30vh;
-  transition: all 0.4s;
-}
-
-.collapsible-container {
-  display: flex;
+.flip-card-inner {
   position: relative;
-  justify-content: space-between;
-}
-
-a.menu-button {
-  color: black;
-  font-size: 2rem;
-  text-decoration: none;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  word-wrap: break-word;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.menu-content {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
-  height: 0;
-  overflow: hidden;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front {
   position: absolute;
-  left: 0px;
-  text-align: justify;
-  transition: all 0.4s ease-in;
-  top: 100%;
-  width: 95%;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
 }
 
-.collapsible-container:hover .frontPageImage {
-  height: 31.5vh;
-}
-
-.collapsible-container:hover .menu-button {
-  color: burlywood;
-}
-
-.collapsible-container:hover .menu-content {
-  display: block;
-  height: 390px;
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 65vh;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 /* small screens */
@@ -112,28 +119,28 @@ a.menu-button {
     margin-top: 15vh;
   }
 
-  /*Desktop Menu*/
-  .frontPageImageContainer {
-    display: none;
+  .PhotographerName {
+    position: absolute;
+    color: rgb(245, 245, 245);
   }
 
-  #desktop-menu {
-    align-items: center;
-    display: flex;
+  /*Flip Card*/
+  .flip-card-container {
     flex-direction: column;
-    height: 80vh;
-    justify-content: center;
+    transform: translateY(0%);
   }
 
-  a.menu-button {
-    font-size: 1.5rem;
-  }
-
-  .collapsible-container {
+  .flip-card {
     margin-top: 10px;
+    width: 70vw;
+    pointer-events: none;
   }
 
-  .collapsible-container:hover .menu-content {
+  .flip-card-front {
+    position: relative;
+  }
+
+  .flip-card-back {
     display: none;
   }
 }

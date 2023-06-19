@@ -64,17 +64,15 @@ function fetchData() {
     })
     .then(response => response.blob())
     .then(blob => {
-      const smallimage = getcorrectPath("tr:w-1000");
-      const mediumimage = getcorrectPath("tr:w-1300");
-      const largeimage = getcorrectPath("tr:w-1600");
+      const smallimage = getcorrectPath("tr:w-800");
+      const largeimage = getcorrectPath("tr:w-1200");
       // Process the image here
       const photo = document.createElement("div");
       photo.classList.add("photo")
       const image = document.createElement("img");
-      image.src = getcorrectPath("tr:w-100"); //used as default
-      image.srcset = `${largeimage} 768w,
-            ${mediumimage} 2000w,
-            ${smallimage} 3000w`;
+      image.src = getcorrectPath("tr:w-8"); //used as default
+      image.srcset = `${smallimage} 1800w,
+            ${largeimage} 3000w`;
       image.sizes = "(max-width: 768px) 100vw, 33vw";
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
