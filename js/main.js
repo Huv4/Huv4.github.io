@@ -38,7 +38,9 @@ function fetchData() {
         "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/01_Portfolio/${i}_image.jpg`,
         "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/02_People/${i}_image.jpg`,
         "MAKRO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/03_Makro/${i}_image.jpg`,
-        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/04_Wedding/${i}_image.jpg`
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/04_Wedding/${i}_image.jpg`,
+        "NATURE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/05_Nature/${i}_image.jpg`,
+        "URBAN": `https://ik.imagekit.io/photoggang/${q}/Blende17/Paula/06_Urban/${i}_image.jpg`
       },
       "ARNE BÖHMER": {
         "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/01_Portfolio/${i}_image.jpg`,
