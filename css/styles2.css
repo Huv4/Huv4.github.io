@@ -132,6 +132,12 @@ Montserrat
   border-radius: 2px;
 }
 
+.photo:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 10px black;
+}
+
 #selectedImage {
   max-height: 100%;
 }
@@ -168,6 +174,25 @@ Montserrat
 .responsiveSideFooter {
   display: none;
 }
+
+/* Pop Up */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#selectedImage {
+  max-height: 100%;
+}
+
 
 @media(max-width: 768px) {
   h1 {

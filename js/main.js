@@ -1,19 +1,28 @@
+//add jQuery functionality
+var script = document.createElement('script');
+script.src = "https://code.jquery.com/jquery-3.7.0.js"; // Check https://releases.jquery.com/ for the current version
+script.integrity = "sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=";
+script.crossorigin = "anonymous";
+document.getElementsByTagName('head')[0].appendChild(script);
+
 //access json element
 const gallery = document.getElementById("photo-gallery");
-const selectedImage = document.getElementById("selectedImage");
 const column1 = document.getElementById("column1");
 const column2 = document.getElementById("column2");
 const column3 = document.getElementById("column3");
 const columns = [column1, column2, column3]; //array to iterate over columns
 let columnIndex = 0;
 let i = 1;
-var media = window.matchMedia("(max-width: 768px)")
+var media = window.matchMedia("(max-width: 768px)");
+
+//Popup Stuff
+const popup = document.getElementById("popup");
+const selectedImage = document.getElementById("selectedImage");
 
 //define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
 const pagePhotographer = document.getElementById("photographer").textContent;
 var q = "";
-
 
 //run this for big screens
 function fetchData() {
@@ -72,9 +81,17 @@ function fetchData() {
       const image = document.createElement("img");
       image.src = getcorrectPath("tr:w-8"); //used as default
       image.srcset = `${smallimage} 2100w,
-            ${largeimage} 2800w`;
+  ${largeimage} 2800w`;
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
+
+      //Popup Stuff
+      image.addEventListener('click', () => {
+        popup.style.display = "flex";
+        selectedImage.src = getcorrectPath("tr:w-4");
+        selectedImage.alt = "A picture. Probably beautiful.";
+      })
+
       //decide if big or small screen
       if (media.matches) {
         gallery.appendChild(image);
@@ -98,6 +115,12 @@ function fetchData() {
       }
     });
 };
+
+popup.addEventListener('click', () => {
+  popup.style.display = "none";
+  popup.src = "";
+  popup.alt = "";
+});
 
 //only run this script when on Photo Gallery Pages
 if (typeof (gallery) != "undefined" && gallery != null) {
