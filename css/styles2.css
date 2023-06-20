@@ -182,7 +182,7 @@ Montserrat
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.95);
   display: none;
   justify-content: center;
   align-items: center;
