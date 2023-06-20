@@ -72,7 +72,7 @@ function fetchData() {
       const image = document.createElement("img");
       image.src = getcorrectPath("tr:w-8"); //used as default
       image.srcset = `${smallimage} 2100w,
-            ${largeimage} 3000w`;
+            ${largeimage} 2800w`;
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
       //decide if big or small screen
