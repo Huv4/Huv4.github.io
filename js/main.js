@@ -75,6 +75,7 @@ function fetchData() {
     .then(blob => {
       const smallimage = getcorrectPath("tr:w-800");
       const largeimage = getcorrectPath("tr:w-1200");
+      const losslessimage = getcorrectPath("tr:w-3000,q-95");
       // Process the image here
       const photo = document.createElement("div");
       photo.classList.add("photo")
@@ -88,7 +89,7 @@ function fetchData() {
       //Popup Stuff
       image.addEventListener('click', () => {
         popup.style.display = "flex";
-        selectedImage.src = getcorrectPath("tr:w-4");
+        selectedImage.src = losslessimage;
         selectedImage.alt = "A picture. Probably beautiful.";
       })
 
