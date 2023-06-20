@@ -213,6 +213,10 @@ Montserrat
     margin-top: 1vh;
   }
 
+  .container {
+    width: 95%;
+  }
+
   /* Side Footer*/
   .sideFooter {
     display: none;
