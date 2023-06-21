@@ -15,9 +15,11 @@ let columnIndex = 0;
 let i = 1;
 var media = window.matchMedia("(max-width: 768px)");
 
-//Popup Stuff
+//Popup Stuff + Loader Stuff
 const popup = document.getElementById("popup");
 const selectedImage = document.getElementById("selectedImage");
+const loaderOuter = document.createElement("span")
+const loaderInner = document.createElement("span")
 
 //define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
@@ -117,7 +119,13 @@ function fetchData() {
     });
 };
 
-//Popup Stuff
+//Popup Stuff + Loader Stuff
+
+loaderOuter.classList.add("loader");
+loaderInner.classList.add("loader-inner");
+loaderOuter.appendChild(loaderInner);
+popup.appendChild(loaderOuter);
+
 popup.addEventListener('click', () => {
   popup.style.display = "none";
   popup.src = "";
