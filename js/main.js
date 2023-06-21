@@ -75,7 +75,7 @@ function fetchData() {
     .then(blob => {
       const smallimage = getcorrectPath("tr:w-800");
       const largeimage = getcorrectPath("tr:w-1200");
-      const losslessimage = getcorrectPath("tr:w-3000,q-95");
+      const losslessimage = getcorrectPath("tr:w-3000,q-100");
       // Process the image here
       const photo = document.createElement("div");
       photo.classList.add("photo")
@@ -91,7 +91,7 @@ function fetchData() {
         popup.style.display = "flex";
         selectedImage.src = losslessimage;
         selectedImage.alt = "A picture. Probably beautiful.";
-      })
+      });
 
       //decide if big or small screen
       if (media.matches) {
@@ -117,6 +117,7 @@ function fetchData() {
     });
 };
 
+//Popup Stuff
 popup.addEventListener('click', () => {
   popup.style.display = "none";
   popup.src = "";
