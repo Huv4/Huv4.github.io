@@ -83,8 +83,10 @@ function fetchData() {
       photo.classList.add("photo")
       const image = document.createElement("img");
       image.src = getcorrectPath("tr:w-8"); //used as default
-      image.srcset = `${smallimage} 2100w,
-  ${largeimage} 2800w`;
+      // load large image for phones, small one for normal desktops and for retina the large one again
+      image.srcset = `${largeimage} 768w,
+      ${smallimage} 2100w,
+      ${largeimage} 2800w`;
       image.alt = "A picture. Probably beautiful.";
       image.classList.add("galleryImg");
 
