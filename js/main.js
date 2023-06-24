@@ -74,7 +74,6 @@ function fetchData() {
     .then(response => response.blob())
     .then(blob => {
       const smallimage = getcorrectPath("tr:w-800");
-      const highqualityImage = getcorrectPath("tr:w-800,q-90")
       const largeimage = getcorrectPath("tr:w-1200");
       const losslessimage = getcorrectPath("tr:w-3000,q-100");
       // Process the image here
@@ -83,7 +82,7 @@ function fetchData() {
       const image = document.createElement("img");
       image.src = getcorrectPath("tr:w-8"); //used as default
       // load large image for phones, small one for normal desktops and for retina the large one again
-      image.srcset = `${highqualityImage} 768w,
+      image.srcset = `${largeimage} 768w,
       ${smallimage} 2100w,
       ${largeimage} 2800w`;
       image.alt = "A picture. Probably beautiful.";
