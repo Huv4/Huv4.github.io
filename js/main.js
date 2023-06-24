@@ -74,7 +74,7 @@ function fetchData() {
     .then(response => response.blob())
     .then(blob => {
       const smallimage = getcorrectPath("tr:w-800");
-      const highqualityImage = getcorrectPath("tr:w-800,q-95")
+      const highqualityImage = getcorrectPath("tr:w-800,q-90")
       const largeimage = getcorrectPath("tr:w-1200");
       const losslessimage = getcorrectPath("tr:w-3000,q-100");
       // Process the image here
