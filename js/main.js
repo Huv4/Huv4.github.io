@@ -94,14 +94,15 @@ function fetchData() {
         selectedImage.src = losslessimage;
         selectedImage.alt = "A picture. Probably beautiful.";
       });
-
+      photo.appendChild(image);
       //decide if big or small screen
       if (media.matches) {
-        gallery.appendChild(image);
+        column1.appendChild(photo);
+        column2.style.display = "none";
+        column3.style.display = "none";
       } else {
         //Append the photo to the current column
-        columns[columnIndex].prepend(photo);
-        photo.appendChild(image);
+        columns[columnIndex].appendChild(photo);
         //update the column index for the next iteration
         columnIndex = (columnIndex + 1) % columns.length;
       };
@@ -120,7 +121,6 @@ function fetchData() {
 };
 
 //Popup Stuff + Loader Stuff
-
 loaderOuter.classList.add("loader");
 loaderInner.classList.add("loader-inner");
 loaderOuter.appendChild(loaderInner);

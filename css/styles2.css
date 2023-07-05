@@ -14,8 +14,8 @@ Montserrat
 }
 
 .backbutton {
-  margin-top: 7vh;
-  margin-left: 10rem;
+  margin-top: 65px;
+  margin-left: 4vw;
   position: absolute;
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
@@ -274,6 +274,17 @@ Montserrat
 
   h2 {
     font-size: 1.2rem;
+  }
+
+  /* Backbutton */
+  .backbutton {
+    margin-top: 35px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 
   /* Dropdown Navbar*/
