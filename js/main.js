@@ -97,12 +97,12 @@ function fetchData() {
       photo.appendChild(image);
       //decide if big or small screen
       if (media.matches) {
-        column1.appendChild(photo);
+        column1.prepend(photo);
         column2.style.display = "none";
         column3.style.display = "none";
       } else {
         //Append the photo to the current column
-        columns[columnIndex].appendChild(photo);
+        columns[columnIndex].prepend(photo);
         //update the column index for the next iteration
         columnIndex = (columnIndex + 1) % columns.length;
       };
