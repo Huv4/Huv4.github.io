@@ -4,6 +4,7 @@ script.src = "https://code.jquery.com/jquery-3.7.0.js"; // Check https://release
 document.getElementsByTagName('head')[0].appendChild(script);
 
 //access json element
+const imageArray = [];
 const gallery = document.getElementById("photo-gallery");
 const column1 = document.getElementById("column1");
 const column2 = document.getElementById("column2");
@@ -73,39 +74,14 @@ function fetchData() {
     })
     .then(response => response.blob())
     .then(blob => {
+      const defaultimage = getcorrectPath("tr:w-8");
       const smallimage = getcorrectPath("tr:w-800");
       const largeimage = getcorrectPath("tr:w-1200");
       const losslessimage = getcorrectPath("tr:w-3000,q-100");
-      // Process the image here
-      const photo = document.createElement("div");
-      photo.classList.add("photo")
-      const image = document.createElement("img");
-      image.src = getcorrectPath("tr:w-8"); //used as default
-      // load large image for phones, small one for normal desktops and for retina the large one again
-      image.srcset = `${largeimage} 768w,
-      ${smallimage} 2100w,
-      ${largeimage} 2800w`;
-      image.alt = "A picture. Probably beautiful.";
-      image.classList.add("galleryImg");
-
-      //Popup Stuff
-      image.addEventListener('click', () => {
-        popup.style.display = "flex";
-        selectedImage.src = losslessimage;
-        selectedImage.alt = "A picture. Probably beautiful.";
-      });
-      photo.appendChild(image);
-      //decide if big or small screen
-      if (media.matches) {
-        column1.prepend(photo);
-        column2.style.display = "none";
-        column3.style.display = "none";
-      } else {
-        //Append the photo to the current column
-        columns[columnIndex].prepend(photo);
-        //update the column index for the next iteration
-        columnIndex = (columnIndex + 1) % columns.length;
-      };
+      // Create Array with necessary data
+      const pathArray = [];
+      pathArray.push(defaultimage, smallimage, largeimage, losslessimage);
+      imageArray.push(pathArray);
       // Increment the counter and call the next iteration
       i++;
       fetchData();
@@ -114,10 +90,49 @@ function fetchData() {
       // Handle the error here
       if (error.message === "Image not found") {
         console.log("404 Error: Image not found");
+        // when there are no images in the folder upload them
+        uploadImage();
       } else {
         console.error(error);
       }
     });
+};
+
+function uploadImage() {
+  // Process the image here
+  reversedimageArray = imageArray.reverse();
+  let ALen = reversedimageArray.length;
+  for (let i = 0; i < ALen; i++) {
+    const photo = document.createElement("div");
+    photo.classList.add("photo")
+    const image = document.createElement("img");
+    image.src = reversedimageArray[i][0]; //access the path that points to the image used as default
+    // load large image for phones, small one for normal desktops and for retina the large one again
+    image.srcset = `${reversedimageArray[i][2]} 768w,
+         ${reversedimageArray[i][1]} 2100w,
+         ${reversedimageArray[i][2]} 2800w`;
+    image.alt = "A picture. Probably beautiful.";
+    image.classList.add("galleryImg");
+    image.loading = "lazy";
+    //Popup Stuff
+    image.addEventListener('click', () => {
+      popup.style.display = "flex";
+      selectedImage.src = reversedimageArray[i][3];
+      selectedImage.alt = "A picture. Probably beautiful.";
+    });
+    photo.appendChild(image);
+    //decide if big or small screen
+    if (media.matches) {
+      column1.appendChild(photo);
+      column2.style.display = "none";
+      column3.style.display = "none";
+    } else {
+      //Append the photo to the current column
+      columns[columnIndex].appendChild(photo);
+      //update the column index for the next iteration
+      columnIndex = (columnIndex + 1) % columns.length;
+    };
+  };
 };
 
 //Popup Stuff + Loader Stuff
