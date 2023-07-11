@@ -58,7 +58,9 @@ function fetchData() {
         "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/02_Travels/${i}_image.jpg`,
         "EVENTS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/03_Events/${i}_image.jpg`,
         "STREET": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/04_Street/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/07_People/${i}_image.jpg`,
         "NATURE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/05_Nature/${i}_image.jpg`,
+        "B&W": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/08_B_W/${i}_image.jpg`,
         "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/06_Wedding/${i}_image.jpg`
       },
       "HANNES SCHUBERT": {},
