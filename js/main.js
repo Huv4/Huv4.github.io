@@ -32,6 +32,7 @@ function fetchData() {
     const dataStructure = {
       "FELIX DRESSLER": {
         "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/01_Portfolio/${i}_image.jpg`,
+        "THE LIFE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/07_Life/${i}_image.jpg`,
         "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/02_People/${i}_image.jpg`,
         "TRAVELS": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/03_Travels/${i}_image.jpg`,
         "NATURE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Felix/06_Nature/${i}_image.jpg`,
