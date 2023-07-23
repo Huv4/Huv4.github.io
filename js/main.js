@@ -148,7 +148,7 @@ function uploadImage() {
 //Popup Stuff
 // Add x to close
 closeButton.classList.add("close-btn");
-closeButton.innerText = 'X';
+closeButton.innerText = '✕';
 popupcontainer.appendChild(closeButton);
 
 //Loader Stuff
