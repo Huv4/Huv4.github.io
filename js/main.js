@@ -117,7 +117,9 @@ function uploadImage() {
          ${reversedimageArray[i][2]} 2800w`;
     image.alt = "A picture. Probably beautiful.";
     image.classList.add("galleryImg");
-    image.loading = "lazy";
+    if (i > 2) {
+      image.loading = "lazy";
+    };
     //Popup Stuff
     image.addEventListener('click', () => {
       popup.style.display = "flex";
