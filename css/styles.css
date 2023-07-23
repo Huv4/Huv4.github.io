@@ -48,7 +48,7 @@ body {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   word-spacing: 100vw;
   width: 100%;
@@ -64,9 +64,10 @@ body {
   align-items: center;
   margin: auto;
   margin-top: 50px;
-  max-width: 100%;
+  max-width: 95%;
   justify-content: space-between;
-  width: 90vw;
+  width: 100vw;
+  flex-wrap: wrap;
 }
 
 .flip-card {
@@ -112,7 +113,7 @@ body {
 }
 
 /* small screens */
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1000px) {
 
   /* Sections */
   #h1LandingPage {
@@ -121,18 +122,20 @@ body {
 
   .PhotographerName {
     position: absolute;
+    font-size: 3.5vw;
     color: rgb(245, 245, 245);
   }
 
   /*Flip Card*/
   .flip-card-container {
-    flex-direction: column;
+    justify-content: center;
     transform: translateY(0%);
   }
 
   .flip-card {
     margin-top: 10px;
-    width: 70vw;
+    margin: 10px;
+    width: 35vw;
     pointer-events: none;
   }
 
