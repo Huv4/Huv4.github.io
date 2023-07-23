@@ -78,9 +78,9 @@ function fetchData() {
     })
     .then(response => response.blob())
     .then(blob => {
-      const defaultimage = getcorrectPath("tr:w-8");
-      const smallimage = getcorrectPath("tr:w-800");
-      const largeimage = getcorrectPath("tr:w-1200");
+      const defaultimage = getcorrectPath("tr:w-8,q-10");
+      const smallimage = getcorrectPath("tr:w-800,q-80");
+      const largeimage = getcorrectPath("tr:w-1200,q-90");
       const losslessimage = getcorrectPath("tr:w-3000,q-100");
       // Create Array with necessary data
       const pathArray = [];
@@ -117,6 +117,7 @@ function uploadImage() {
          ${reversedimageArray[i][2]} 2800w`;
     image.alt = "A picture. Probably beautiful.";
     image.classList.add("galleryImg");
+    // add lazy loading
     if (i > 2) {
       image.loading = "lazy";
     };
