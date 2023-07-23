@@ -311,7 +311,7 @@ Montserrat
 
   /* Backbutton */
   .backbutton {
-    margin-top: 35px;
+    margin-top: 10px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -321,6 +321,10 @@ Montserrat
   }
 
   /* Dropdown Navbar*/
+  #photographer {
+    margin-top: 40px;
+  }
+
   .dropdown-content a {
     font-size: 1.3rem;
   }
@@ -332,7 +336,7 @@ Montserrat
 
   /*Category Menu*/
   .categoryMenuContent {
-    margin-top: 1vh;
+    margin-top: 5px;
     display: block;
     text-align: center;
   }
@@ -361,7 +365,7 @@ Montserrat
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     flex-direction: column;
-    margin-top: 5vh;
+    margin-top: 30px;
     text-align: center;
     margin-bottom: 0;
   }
