@@ -183,6 +183,24 @@ Montserrat
 }
 
 /* Loader Stuff */
+#popup {
+  position: relative;
+}
+
+.loadText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  /* Move it 50% down from the center */
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+  color: #Fff;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .loader {
   position: absolute;
   display: inline-block;

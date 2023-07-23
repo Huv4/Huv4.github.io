@@ -19,6 +19,7 @@ const popup = document.getElementById("popup");
 const selectedImage = document.getElementById("selectedImage");
 const loaderOuter = document.createElement("span")
 const loaderInner = document.createElement("span")
+const loadText = document.createElement("span")
 
 //define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
@@ -153,6 +154,10 @@ popup.addEventListener('click', () => {
   popup.src = "";
   popup.alt = "";
 });
+
+loadText.classList.add("loadText");
+loadText.innerHTML = "Loading HiRes image...";
+popup.appendChild(loadText);
 
 //only run this script when on Photo Gallery Pages
 if (typeof (gallery) != "undefined" && gallery != null) {
