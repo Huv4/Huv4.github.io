@@ -16,10 +16,12 @@ var media = window.matchMedia("(max-width: 768px)");
 
 //Popup Stuff + Loader Stuff
 const popup = document.getElementById("popup");
+const popupcontainer = document.getElementById("popupcontainer");
 const selectedImage = document.getElementById("selectedImage");
-const loaderOuter = document.createElement("span")
-const loaderInner = document.createElement("span")
-const loadText = document.createElement("span")
+const loaderOuter = document.createElement("span");
+const loaderInner = document.createElement("span");
+const loadText = document.createElement("span");
+const closeButton = document.createElement("div");
 
 //define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
@@ -143,18 +145,25 @@ function uploadImage() {
   };
 };
 
-//Popup Stuff + Loader Stuff
+//Popup Stuff
+// Add x to close
+closeButton.classList.add("close-btn");
+closeButton.innerText = 'X';
+popupcontainer.appendChild(closeButton);
+
+//Loader Stuff
 loaderOuter.classList.add("loader");
 loaderInner.classList.add("loader-inner");
 loaderOuter.appendChild(loaderInner);
 popup.appendChild(loaderOuter);
 
-popup.addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
   popup.style.display = "none";
   popup.src = "";
   popup.alt = "";
 });
 
+// add Loading Text
 loadText.classList.add("loadText");
 loadText.innerHTML = "Loading HiRes image...";
 popup.appendChild(loadText);

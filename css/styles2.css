@@ -6,7 +6,7 @@ Montserrat Subrayada
 Montserrat
 */
 
-@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&family=Montserrat+Subrayada&family=Montserrat:wght@200;300&display=swap);
+@import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&family=Montserrat+Subrayada&family=Montserrat:wght@200;300;600;900&display=swap);
 
 #photographer {
   font-family: 'Montserrat Subrayada', sans-serif;
@@ -142,13 +142,6 @@ Montserrat
   box-shadow: 3px 3px 10px black;
 }
 
-#selectedImage {
-  cursor: zoom-in;
-  position: absolute;
-  max-height: 100%;
-  z-index: 2;
-}
-
 /*Side Footer*/
 .sideFooter {
   display: flex;
@@ -183,9 +176,6 @@ Montserrat
 }
 
 /* Loader Stuff */
-#popup {
-  position: relative;
-}
 
 .loadText {
   position: absolute;
@@ -199,14 +189,15 @@ Montserrat
   color: #Fff;
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
+  z-index: 1;
 }
 
 .loader {
   position: absolute;
-  display: inline-block;
+  top: 45%;
+  left: 50%;
   width: 30px;
   height: 30px;
-  position: relative;
   border: 4px solid #Fff;
   animation: loader 2s infinite ease;
   z-index: 1;
@@ -214,12 +205,14 @@ Montserrat
 
 .loader-inner {
   position: absolute;
+  top: 0%;
+  left: 0%;
   vertical-align: top;
-  display: inline-block;
   width: 100%;
-  background-color: #fff;
+  height: 100%;
+  background-color: #Fff;
   animation: loader-inner 2s infinite ease-in;
-  z-index: 1;
+  z-index: 2;
 }
 
 @keyframes loader {
@@ -269,6 +262,8 @@ Montserrat
 /* Pop Up */
 #popup {
   position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -277,12 +272,31 @@ Montserrat
   display: none;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  z-index: 1;
+}
+
+#popupcontainer {
+  position: relative;
+  z-index: 2;
 }
 
 #selectedImage {
-  max-width: 100%;
-  max-height: 100%;
+  position: relative;
+  max-width: 98vw;
+  max-height: 98vh;
+  cursor: zoom-in;
+  z-index: 2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: whitesmoke;
+  z-index: 3;
 }
 
 @media(max-width:1000px) {
@@ -350,6 +364,11 @@ Montserrat
     margin-top: 5vh;
     text-align: center;
     margin-bottom: 0;
+  }
+
+  /* Pop Up */
+  .close-btn {
+    font-size: 1.5rem;
   }
 }
 
