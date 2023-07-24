@@ -8,9 +8,23 @@ Montserrat
 
 @import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&family=Montserrat+Subrayada&family=Montserrat:wght@200;300;600;900&display=swap);
 
-#photographer {
-  font-family: 'Montserrat Subrayada', sans-serif;
-  margin-top: 7vh;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button to the top */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  display: none;
+  z-index: 4;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .backbutton {
@@ -29,6 +43,11 @@ Montserrat
 
 .backbutton:hover {
   font-weight: 300;
+}
+
+#photographer {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  margin-top: 7vh;
 }
 
 /*Dropdown Navbar*/
@@ -299,6 +318,7 @@ Montserrat
   z-index: 3;
 }
 
+
 @media(max-width:1000px) {
   h1 {
     margin-top: 0;
@@ -319,6 +339,8 @@ Montserrat
     right: 0;
     text-align: center;
   }
+
+  /* Button back to top*/
 
   /* Dropdown Navbar*/
   #photographer {
@@ -377,6 +399,11 @@ Montserrat
 }
 
 @media(max-width: 600px) {
+
+  /* Back to top button */
+  #btn-back-to-top {
+    color: whitesmoke;
+  }
 
   /* Photo Gallery */
   #photo-gallery {
