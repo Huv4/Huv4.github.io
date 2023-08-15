@@ -44,7 +44,7 @@ body {
 }
 
 /* Flip Card */
-.container {
+.FrontPageContainer {
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 2vh;
