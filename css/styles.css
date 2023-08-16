@@ -133,7 +133,7 @@ body {
   }
 
   /*Flip Card*/
-  .container {
+  .FrontPageContainer {
     justify-content: center;
     transform: translateY(0%);
   }
@@ -167,7 +167,7 @@ body {
     font-size: 6vw;
   }
 
-  .container {
+  .FrontPageContainer {
     margin-top: 20px;
   }
 
