@@ -1,9 +1,9 @@
-//add jQuery functionality
+// add jQuery functionality
 var script = document.createElement('script');
 script.src = "https://code.jquery.com/jquery-3.7.0.js"; // Check https://releases.jquery.com/ for the current version
 document.getElementsByTagName('head')[0].appendChild(script);
 
-//access json element
+// access json element
 const imageArray = [];
 const gallery = document.getElementById("photo-gallery");
 const column1 = document.getElementById("column1");
@@ -14,7 +14,7 @@ let columnIndex = 0;
 let i = 1;
 var media = window.matchMedia("(max-width: 768px)");
 
-//Popup Stuff + Loader Stuff
+// Popup Stuff + Loader Stuff
 const popup = document.getElementById("popup");
 const popupcontainer = document.getElementById("popupcontainer");
 const selectedImage = document.getElementById("selectedImage");
@@ -23,12 +23,12 @@ const loaderInner = document.createElement("span");
 const loadText = document.createElement("span");
 const closeButton = document.createElement("div");
 
-//define variables and arrays for pages of different Photographers and Categories
+// define variables and arrays for pages of different Photographers and Categories
 const pageType = document.getElementById("pageType").textContent;
 const pagePhotographer = document.getElementById("photographer").textContent;
 var q = "";
 
-//run this for big screens
+// run this for big screens
 function fetchData() {
   console.log("fetching path", getcorrectPath("tr:w-8"))
   function getcorrectPath(q) {
