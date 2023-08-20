@@ -35,7 +35,7 @@ body {
 }
 
 .frontPageImage {
-  width: 100%;
+  width: 93%;
 }
 
 .clickable {
@@ -132,6 +132,10 @@ body {
     z-index: 2;
   }
 
+  .frontPageImage {
+    width: 93%;
+  }
+
   /*Flip Card*/
   .FrontPageContainer {
     justify-content: center;
@@ -169,6 +173,10 @@ body {
 
   .FrontPageContainer {
     margin-top: 20px;
+  }
+
+  .frontPageImage {
+    width: 100%;
   }
 
 }
