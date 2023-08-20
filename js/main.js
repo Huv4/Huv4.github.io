@@ -67,7 +67,12 @@ function fetchData() {
         "B&W": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/08_B_W/${i}_image.jpg`,
         "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Arne/06_Wedding/${i}_image.jpg`
       },
-      "HANNES SCHUBERT": {},
+      "HANNES SCHUBERT": {
+        "PORTFOLIO": `https://ik.imagekit.io/photoggang/${q}/Blende17/Hannes/01_Portfolio/${i}_image.jpg`,
+        "NATURE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Hannes/02_Nature/${i}_image.jpg`,
+        "PEOPLE": `https://ik.imagekit.io/photoggang/${q}/Blende17/Hannes/03_People/${i}_image.jpg`,
+        "WEDDING": `https://ik.imagekit.io/photoggang/${q}/Blende17/Hannes/04_Wedding/${i}_image.jpg`,
+      },
     };
     const path = dataStructure[pagePhotographer][pageType];
     return path;
