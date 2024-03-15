@@ -8,24 +8,53 @@ Montserrat
 
 @import url(//fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&family=Montserrat+Subrayada&family=Montserrat:wght@200;300;600;900&display=swap);
 
-/* Sections */
+:root {
+  --primary-color: rgb(245, 245, 245);
+  --secondary-color: black;
+  --accent-color: rgb(32, 138, 174);
+  --second-accent: rgb(95, 99, 79);
+}
+
+/* Sitewide Styling */
 h1 {
-  text-align: center;
-  font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  margin-top: 50px;
+ font-family: Montserrat;
+ color: var(--primary-color);
+ font-weight: 200;
+ font-size: 3vw;
 }
 
 h2 {
-  text-align: center;
-  font-weight: 200;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+}
+
+p {
+  font-family: Montserrat;
+  color: var(--secondary-color);
+  font-weight: 300;
+  font-size: 1.5vw;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:hover{
+  color: var(--accent-color);
 }
 
 body {
-  background-color: rgb(245, 245, 245);
+  background-color: var(--primary-color);
+}
+
+header {
+}
+
+section {
+  text-align: center;
+}
+
+.default_container{
+  max-width: 1964px;
+  display: inline-block;
 }
 
 /* Remove default margin + padding */
@@ -34,149 +63,66 @@ body {
   padding: 0;
 }
 
-.frontPageImage {
-  width: 93%;
+/* Header */
+
+.header_grid{
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.clickable {
-  text-decoration: none;
-  color: black;
+.header_grid div {
+  grid-row-start: 1;
+  grid-column-start: 1;
+ }
+
+#header_image{
 }
 
-/* Flip Card */
-.FrontPageContainer {
-  display: flex;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2vh;
-  top: 0%;
-  left: 0%;
-  transform: translateY(-50%);
-  align-items: center;
-  margin: auto;
-  margin-top: 50px;
-  max-width: 95%;
-  justify-content: space-between;
-  width: 100vw;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 19vw;
-}
-
-.card-inner {
-  position: relative;
+.website_heading_container{
+  position: sticky;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  align-self: start;
+  margin-top: 30vh;
+  top: 0;
   width: 100%;
-  height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  z-index: 1;
 }
 
-/*Position the Name*/
-.PhotographerName {
-  position: absolute;
-  color: black;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
-  text-align: center;
-  word-spacing: 100vw;
-  height: 100%;
+#website_heading{
+}
+
+/* Body */
+
+/* White Section */
+.white_section{
+  padding: 10vw;
+}
+
+.social_media_container{
   width: 100%;
-}
-
-/* Position the front and back side */
-.card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* Style the back side */
-.card-back {
   display: flex;
-  position: absolute;
-  align-items: center;
-  height: 0px;
-  background: whitesmoke;
+  flex-direction: row;
   justify-content: center;
-  transition: 0.6s;
-  overflow: hidden;
+  align-items: center;
+  margin-top: 30px;
 }
 
-.card:hover .card-back {
-  height: 65vh;
+.clickable_container{
+  font-size: 3vw;
+  padding: 5px;
 }
 
-.card-back>* {
-  transition: transform 0.6s;
+/* Banner Section */
+.banner_image{
+  max-width: 100%;
+  opacity: 97%;
 }
 
-.card:hover .card-back>* {
-  transform: translateY(0px);
-}
-
-/* small screens */
-@media only screen and (max-width: 1000px) {
-
-  /* Sections */
-  #h1LandingPage {
-    margin-top: 8vh;
+/* Super Wide Screens */
+@media screen and (min-width: 1964px) {
+  .banner_image{
+    border-radius: 5px;
   }
-
-  .PhotographerName {
-    position: absolute;
-    font-size: 3.5vw;
-    color: rgb(245, 245, 245);
-    z-index: 2;
-  }
-
-  .frontPageImage {
-    width: 93%;
-  }
-
-  /*Flip Card*/
-  .FrontPageContainer {
-    justify-content: center;
-    transform: translateY(0%);
-  }
-
-  .card {
-    margin-top: 10px;
-    margin: 10px;
-    width: 40vw;
-    pointer-events: none;
-  }
-
-  .card-front {
-    position: relative;
-  }
-
-  .card-back {
-    display: none;
-  }
-}
-
-@media(max-width: 600px) {
-  h1 {
-    margin-top: 20px;
-  }
-
-  .card {
-    width: 65vw;
-  }
-
-  .PhotographerName {
-    font-size: 6vw;
-  }
-
-  .FrontPageContainer {
-    margin-top: 20px;
-  }
-
-  .frontPageImage {
-    width: 100%;
-  }
-
 }

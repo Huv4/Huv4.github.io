@@ -14,6 +14,18 @@ let columnIndex = 0;
 let i = 1;
 var media = window.matchMedia("(max-width: 768px)");
 
+//Typewriter Heading Stuff
+typeWriterCount = 0;
+function typeWriter() {
+  var txt = 'Blende 1.7';
+  var speed = 100;
+  if (typeWriterCount < txt.length) {
+    document.getElementById("website_heading").innerHTML += txt.charAt(typeWriterCount);
+    typeWriterCount++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 // Popup Stuff + Loader Stuff
 const popup = document.getElementById("popup");
 const popupcontainer = document.getElementById("popupcontainer");
@@ -206,5 +218,5 @@ if (typeof (gallery) != "undefined" && gallery != null) {
   fetchData();
 }
 else {
-  console.log("Not on Photo Gallery Page.S");
+  console.log("Not on Photo Gallery Page.");
 };
