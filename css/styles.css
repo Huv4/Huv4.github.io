@@ -17,10 +17,10 @@ Montserrat
 
 /* Sitewide Styling */
 h1 {
- font-family: Montserrat;
- color: var(--primary-color);
- font-weight: 200;
- font-size: 3vw;
+  font-family: Montserrat;
+  color: var(--primary-color);
+  font-weight: 200;
+  font-size: 3vw;
 }
 
 h2 {
@@ -49,6 +49,7 @@ header {
 }
 
 section {
+  position: relative;
   text-align: center;
 }
 
@@ -67,7 +68,6 @@ section {
 
 .header_grid{
   display: grid;
-  grid-template-columns: 1fr;
 }
 
 .header_grid div {
@@ -80,13 +80,14 @@ section {
 
 .website_heading_container{
   position: sticky;
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
   padding-top: 10px;
   padding-bottom: 15px;
   align-self: start;
-  margin-top: 30vh;
   top: 0;
   width: 100%;
-  text-align: center;
   z-index: 1;
 }
 
@@ -115,9 +116,33 @@ section {
 }
 
 /* Banner Section */
+.banner_and_profile{
+}
+
 .banner_image{
   max-width: 100%;
   opacity: 97%;
+}
+
+.profile_img_container{
+  position: absolute;
+  bottom: 50%;
+  left: 2%;
+  z-index: 1;
+}
+
+.profile_img{
+  border-radius: 5px;
+  max-height: 60vh;
+  max-width: 180px;
+}
+
+.photographer_name{
+  color: var(--primary-color);
+}
+
+.description{
+  padding: 30px 10px;
 }
 
 /* Super Wide Screens */
@@ -125,4 +150,21 @@ section {
   .banner_image{
     border-radius: 5px;
   }
+}
+
+/*Tablet*/
+@media screen and (max-width: 800px) {
+  .website_heading_container{
+    margin-top: 90px;
+  }
+  .profile_img{
+    max-width: 120px;
+}
+}
+
+/*Mobile*/
+@media screen and (max-width: 640px) {
+  .profile_img{
+    max-width: 90px;
+}
 }
