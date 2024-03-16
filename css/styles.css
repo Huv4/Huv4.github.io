@@ -24,6 +24,23 @@ h1 {
 }
 
 h2 {
+  font-family: Montserrat;
+  color: var(--secondary-color);
+  font-weight: 200;
+  font-size: 2vw;
+
+}
+
+h3 {
+  font-family: Montserrat;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 2vw;
+
+}
+
+hr {
+  width: 50%;
 }
 
 p {
@@ -51,11 +68,16 @@ header {
 section {
   position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .default_container{
   max-width: 1964px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Remove default margin + padding */
@@ -73,9 +95,14 @@ section {
 .header_grid div {
   grid-row-start: 1;
   grid-column-start: 1;
- }
+}
 
 #header_image{
+}
+
+.banner_image{
+  max-width: 100%;
+  opacity: 97%;
 }
 
 .website_heading_container{
@@ -115,34 +142,68 @@ section {
   padding: 5px;
 }
 
-/* Banner Section */
-.banner_and_profile{
+/* Photographer Section */
+.grid_container_left {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
-.banner_image{
-  max-width: 100%;
-  opacity: 97%;
+.grid_container_right{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
-.profile_img_container{
-  position: absolute;
-  bottom: 50%;
-  left: 2%;
-  z-index: 1;
+.text_container {
+  padding: 10px;
 }
 
-.profile_img{
-  border-radius: 5px;
-  max-height: 60vh;
-  max-width: 180px;
+.photographer_name_container{
+  margin-left: 10px;
 }
 
 .photographer_name{
-  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.description_container{
+  padding: 10px;
 }
 
 .description{
-  padding: 30px 10px;
+  text-align: justify;
+}
+
+.category_container {
+overflow-y: scroll;
+height: 100vh;
+}
+
+.one_category_container{
+height: 200vh
+}
+
+.category_text_container{
+  margin-right: 10px;
+}
+
+.category_heading{
+  text-align: right;
+}
+
+.category_cover_container{
+  padding: 10px;
+}
+
+.category_cover{
+  border-radius: 5px;
+  width: 100%;
 }
 
 /* Super Wide Screens */
@@ -157,14 +218,8 @@ section {
   .website_heading_container{
     margin-top: 90px;
   }
-  .profile_img{
-    max-width: 120px;
-}
 }
 
 /*Mobile*/
 @media screen and (max-width: 640px) {
-  .profile_img{
-    max-width: 90px;
-}
 }
